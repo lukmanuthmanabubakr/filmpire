@@ -15,6 +15,6 @@ export default makeStyles ((theme) => ({
         color: theme.palette.text.primary,
     },
     genreImages: {
-        filter: theme.palette.mode === 'dark' ? 'dark' : 'Invert(1)',
+        filter: theme.palette.mode === 'light' ? 'dark' : 'Invert(1)',
     }
 }))
