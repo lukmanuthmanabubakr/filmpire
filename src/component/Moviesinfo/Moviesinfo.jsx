@@ -95,10 +95,11 @@ const Moviesinfo = () => {
             </Typography>
           </Box>
           <Typography variant="h6" align="center" gutterBottom>
-            {data?.runtime}min{" "}
+            {data?.runtime}min | language:{data?.spoken_language}
+            {/* {data?.runtime}min{" "}
             {data?.spoken_languages.length > 0
               ? `/${data?.spoken_languages[0].name}`
-              : ""}
+              : ""} */}
           </Typography>
         </Grid>
         <Grid item className={classes.genresContainer}>

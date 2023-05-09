@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
     searchContainer: {
         [
             theme.breakpoints.down("sm")]: {
-                display: "flex",
+                display: 'none',
                 justifyContent: "center",
                 width: "100%",
             },
