@@ -4,12 +4,11 @@
 //use newly 
 
 
-
-
 import React, {useState} from 'react'
 import {Box, Button, CircularProgress, Grid, Typography} from '@mui/material';
-import {useHistory, useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import { ArrowBack } from '@mui/icons-material';
+import { useGetActorsDetailsQuery } from '../Services/TMDB';
 
 const Actor = () => {
   const {id} = useParams()

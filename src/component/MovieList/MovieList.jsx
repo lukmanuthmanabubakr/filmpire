@@ -1,18 +1,17 @@
-import React from 'react'
-import { Grid } from '@mui/material'
-import useStyle from './Style'
-import {Movie} from '..'
+import React from "react";
+import { Grid } from "@mui/material";
+import useStyle from "./Style";
+import { Movie } from "..";
 
-const MovieList = ({movies, numberOfMovies}) => {
-
-    const classes = useStyle()
+const MovieList = ({ movies, numberOfMovies }) => {
+  const classes = useStyle();
   return (
     <Grid container className={classes.moviesContainer}>
-        {movies.results.slice(0, numberOfMovies).map((movie, i) => (
-            <Movie key={i} movie = {movie} i = {i}/>
-        ))}
+      {movies.results.slice(0, numberOfMovies).map((movie, i) => (
+        <Movie key={i} movie={movie} i={i} />
+      ))}
     </Grid>
-  )
-}
+  );
+};
 
-export default MovieList
+export default MovieList;
