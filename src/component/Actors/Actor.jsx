@@ -8,12 +8,15 @@
 
 import React, {useState} from 'react'
 import {Box, Button, CircularProgress, Grid, Typography} from '@mui/material';
-import {useHistory, useParam} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import { ArrowBack } from '@mui/icons-material';
 
 const Actor = () => {
+  const {id} = useParams()
   return (
-    <div>Actor</div>
+    <div>
+      Actor {id}
+    </div>
   )
 }
 
