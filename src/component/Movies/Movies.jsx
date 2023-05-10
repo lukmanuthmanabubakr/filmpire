@@ -11,6 +11,9 @@ const Movies = () => {
   const {genreIdOrCategoryName, searchQuery} = useSelector((state) => state.currentGenreOrCategory)
   const { data, error, isFetching }= useGetMoviesQuery({genreIdOrCategoryName, page, searchQuery});
   
+  const lg =useMediaQuery((theme) => theme.breakpoints.only('lg'))
+  const numberOfMovies = lg? 16 :18
+
   if(isFetching) {
     return (
       <Box display='flex'>
@@ -39,7 +42,7 @@ const Movies = () => {
   console.log(data);
   return (
     <div>
-      <MovieList movies={data}/>
+      <MovieList movies={data}numberOfMovies={numberOfMovies}/>
       <Pagination currentPage={page} setPage={setPage} totalPage={data?.total_pages}/>
     </div>
   )

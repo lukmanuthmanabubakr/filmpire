@@ -7,8 +7,7 @@ export default makeStyles (() => ({
     },
     content: {
         flexGrow: '1',
-        padding: '5rem',
-        
+        padding: '4rem',
     },
     toolBar: {
         display: 'flex',
