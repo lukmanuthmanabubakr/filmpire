@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Movie as MovieIcon,
   Theaters,
@@ -25,22 +25,52 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import useStyles from "./Style";
 import axios from "axios";
-import { useGetMovieQuery, useGetRecommendationsQuery } from "../Services/TMDB";
+import {
+  useGetMovieQuery,
+  useGetRecommendationsQuery,
+  useGetListQuery,
+} from "../Services/TMDB";
 import genreIcons from "../../assets/genres";
+import { userSelector } from "../../Features/auth";
 import { MovieList } from "..";
 
 const Moviesinfo = () => {
+  const {user} = useSelector(userSelector)
   const { id } = useParams();
   const classes = useStyles();
   const dispatch = useDispatch();
-
   const [open, setOpen] = useState(false);
+
+
+  const { data: favoriteMovie } = useGetListQuery({
+    listName: "favorite/movies",
+    accountId: "accountId:user.id",
+    sessionId: localStorage.getItem("session_id"),
+    page: 1,
+  });
+  const { data: watchlistMovies } = useGetListQuery({
+    listName: "watchlist/movies",
+    accountId: "accountId:user.id",
+    sessionId: localStorage.getItem("session_id"),
+    page: 1,
+  });
 
   // const isMovieFavorited = true;
   // const isMovieListed = true;
 
+  const { data, isFetching, error } = useGetMovieQuery(id);
+  const { data: recommendations, isFetching: isRecommendationsFetching } =
+    useGetRecommendationsQuery({ list: "/recommendations", movie_id: id });
+
   const [isMovieFavorited, setisMovieFavorited] = useState(false);
-  const [isMovieListed, setisMovieListed] = useState(false);
+  const [isMovieWatchList, setisMovieWatchList] = useState(false);
+
+  useEffect(() => {
+    setisMovieFavorited(!!favoriteMovie?.results.find((movie) => movie.id === data?.id))
+  }, [favoriteMovie, data]);
+  useEffect(() => {
+    setisMovieWatchList(!!watchlistMovies?.results.find((movie) => movie.id === data?.id))
+  }, [watchlistMovies])
 
   const addToFavorite = async () => {
     await axios.post(
@@ -63,17 +93,15 @@ const Moviesinfo = () => {
       {
         media_type: "movie",
         media_id: id,
-        favorite: !isMovieListed,
+        favorite: !isMovieWatchList,
       }
     );
-    setisMovieListed((prev) => !prev);
+    setisMovieList((prev) => !prev);
   };
 
-  const { data, isFetching, error } = useGetMovieQuery(id);
+ 
 
-  const { data: recommendations, isFetching: isRecommendationsFetching } =
-    useGetRecommendationsQuery({ list: "/recommendations", movie_id: id });
-  console.log(recommendations);
+
 
   if (isFetching) {
     return (
@@ -194,7 +222,7 @@ const Moviesinfo = () => {
                 </Button>
                 <Button
                   onClick={addToWatchList}
-                  endIcon={isMovieListed ? <Remove /> : <PlusOne />}
+                  endIcon={isMovieWatchList ? <Remove /> : <PlusOne />}
                 >
                   WatchList
                 </Button>
@@ -220,7 +248,7 @@ const Moviesinfo = () => {
       {/* Recommendation */}
       <Box marginTop="5rem" width="100%">
         <Typography variant="h3" gutterBottom align="center">
-          <h2>You Might Also Like</h2>
+          You Might Also Like
         </Typography>
         {recommendations ? (
           <MovieList movies={recommendations} numberOfMovies={12} />
@@ -236,12 +264,12 @@ const Moviesinfo = () => {
       >
         {data?.videos?.results?.length > 0 && (
           <iframe
-            autoplay
+            autoPlay
             className={classes.videos}
-            frameborder="0"
+            frameBorder="0"
             title="Trailer"
             src={`https://www.youtube.com/embed/${data.videos.results[0].key}`}
-            allow="autoplay"
+            allow="autoPlay"
           />
         )}
       </Modal>
