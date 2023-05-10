@@ -36,11 +36,38 @@ const Moviesinfo = () => {
 
   const [open, setOpen] = useState(false);
 
-  const isMovieFavorited = true;
-  const isMovieListed = true;
+  // const isMovieFavorited = true;
+  // const isMovieListed = true;
 
-  const addToFavorite = () => {};
-  const addToWatchList = () => {};
+  const [isMovieFavorited, setisMovieFavorited] = useState(false);
+  const [isMovieListed, setisMovieListed] = useState(false);
+
+  const addToFavorite = async () => {
+    await axios.post(
+      `https://api.themoviedb.org/3/account/${user.id}/favorite?api_key=${
+        import.meta.env.VITE_APP_TMDB_KEY
+      }&session_id=${localStorage.getItem("session_id")}`,
+      {
+        media_type: "movie",
+        media_id: id,
+        favorite: !isMovieFavorited,
+      }
+    );
+    setisMovieFavorited((prev) => !prev);
+  };
+  const addToWatchList = async () => {
+    await axios.post(
+      `https://api.themoviedb.org/3/account/${user.id}/watchlist?api_key=${
+        import.meta.env.VITE_APP_TMDB_KEY
+      }&session_id=${localStorage.getItem("session_id")}`,
+      {
+        media_type: "movie",
+        media_id: id,
+        favorite: !isMovieListed,
+      }
+    );
+    setisMovieListed((prev) => !prev);
+  };
 
   const { data, isFetching, error } = useGetMovieQuery(id);
 
@@ -146,7 +173,11 @@ const Moviesinfo = () => {
                 >
                   Imdb
                 </Button>
-                <Button onClick={() => setOpen(true)} href="#" endIcon={<Theaters />}>
+                <Button
+                  onClick={() => setOpen(true)}
+                  href="#"
+                  endIcon={<Theaters />}
+                >
                   Trailer
                 </Button>
               </ButtonGroup>
@@ -205,12 +236,12 @@ const Moviesinfo = () => {
       >
         {data?.videos?.results?.length > 0 && (
           <iframe
-          autoplay
-          className={classes.videos}
-          frameborder="0"
-          title="Trailer"
-          src={`https://www.youtube.com/embed/${data.videos.results[0].key}`}
-          allow="autoplay"
+            autoplay
+            className={classes.videos}
+            frameborder="0"
+            title="Trailer"
+            src={`https://www.youtube.com/embed/${data.videos.results[0].key}`}
+            allow="autoplay"
           />
         )}
       </Modal>
