@@ -62,10 +62,6 @@ export const userSelector = (state) => state.user;
 //             state.isAuthenticated=true;
 
 //             state.sessionId = localStorage.getItem('session_Id');
-//             localStorage.setItem('accountId', action.payload.id);
-//         }
-//     }
-// })
 
 // export const {setUser} = authSlice.actions;
 
