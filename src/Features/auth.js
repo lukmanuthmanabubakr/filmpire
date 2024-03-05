@@ -63,5 +63,3 @@ export const userSelector = (state) => state.user;
 
 //             state.sessionId = localStorage.getItem('session_Id');
 
-// export const {setUser} = authSlice.actions;
-
