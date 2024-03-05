@@ -54,11 +54,6 @@ export const userSelector = (state) => state.user;
 
 
 
-// const initialState = {
-//     user: {},
-//     isAuthenticated: false,
-//     sessionId: '',
-// };
 
 // const authSlice = createSlice ({
 //     name: 'user',
