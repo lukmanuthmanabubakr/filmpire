@@ -55,9 +55,6 @@ export const userSelector = (state) => state.user;
 
 
 
-// const authSlice = createSlice ({
-//     name: 'user',
-//     initialState,
 
 //     reducers: {
 //         setUser: (state, action) => {
