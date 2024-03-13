@@ -43,10 +43,6 @@ export const createSessionId = async () => {
 
 
 
-// export const fetchToken = async () => {
-//   try {
-//     const {data} = await moviesApi.get(`/authentication/token/new`);
-//     const token = data.request_token;
 
 //     if(data.success) {
 //       localStorage.setItem('request_token', token);
