@@ -44,7 +44,4 @@ export const createSessionId = async () => {
 
 
 
-//   }catch (error) {
-//     console.log('Your token coul
-
 
