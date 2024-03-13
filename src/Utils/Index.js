@@ -47,6 +47,5 @@ export const createSessionId = async () => {
 //   }catch (error) {
 //     console.log('Your token could not be created')
 //   }
-// }
 
 
