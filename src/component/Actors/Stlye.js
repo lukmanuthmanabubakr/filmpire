@@ -4,7 +4,3 @@
 //     image: {
 //         maxWidth: '20px',
 //         borderRadius: '',
-//         objectFit: 'cover'
-//     }
-// }));
-
