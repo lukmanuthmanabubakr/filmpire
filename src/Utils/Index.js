@@ -42,10 +42,7 @@ export const createSessionId = async () => {
 };
 
 
-// import axios from 'axios';
 
-// export  const moviesApi = axios.create(
-//   {
 //     baseURL: "https://api.themoviedb.org/3",
 //     params: {
 //       api_key: import.meta.env.VITE_APP_TMDB_KEY,
