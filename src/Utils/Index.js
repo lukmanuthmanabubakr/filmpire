@@ -43,13 +43,6 @@ export const createSessionId = async () => {
 
 
 
-//     baseURL: "https://api.themoviedb.org/3",
-//     params: {
-//       api_key: import.meta.env.VITE_APP_TMDB_KEY,
-//     }
-//   }
-// )
-
 // export const fetchToken = async () => {
 //   try {
 //     const {data} = await moviesApi.get(`/authentication/token/new`);
