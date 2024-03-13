@@ -44,8 +44,6 @@ export const createSessionId = async () => {
 
 
 
-//       window.location.href = `https://www.themoviedb.org/authentication/${token}?redirect_to=${window.location.origin}/approved`;
-//     }
 //   }catch (error) {
 //     console.log('Your token could not be created')
 //   }
