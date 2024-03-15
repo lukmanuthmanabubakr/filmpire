@@ -1,5 +1,4 @@
-// //use useparam to get actor id
-// //make a new call using redux toolkit query => to get actor details call
+
 // //research tmdb api docs
 // //use newly
 
