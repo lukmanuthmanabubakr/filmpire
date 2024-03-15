@@ -1,6 +1,4 @@
 
-// //research tmdb api docs
-// //use newly
 
 // import React, { useState } from "react";
 // import { Box, Button, CircularProgress, Grid, Typography } from "@mui/material";
