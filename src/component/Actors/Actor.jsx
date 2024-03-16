@@ -1,5 +1,4 @@
 
-// import { useNavigate, useParams } from "react-router-dom";
 // import { ArrowBack } from "@mui/icons-material";
 // import { useGetActorsDetailsQuery } from "../Services/TMDB";
 // import { ClassNames } from "@emotion/react";
