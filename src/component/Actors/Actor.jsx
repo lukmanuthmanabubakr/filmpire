@@ -1,8 +1,4 @@
 
-// import { ClassNames } from "@emotion/react";
-// import useStyles from '../Actors/Stlye'
-
-
 //   const { data, isFetching, error } = useGetActorsDetailsQuery(id);
 
 //   if (isFetching) {
