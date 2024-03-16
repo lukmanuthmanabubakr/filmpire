@@ -1,7 +1,4 @@
 
-
-// import React, { useState } from "react";
-// import { Box, Button, CircularProgress, Grid, Typography } from "@mui/material";
 // import { useNavigate, useParams } from "react-router-dom";
 // import { ArrowBack } from "@mui/icons-material";
 // import { useGetActorsDetailsQuery } from "../Services/TMDB";
