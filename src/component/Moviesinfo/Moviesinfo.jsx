@@ -56,7 +56,6 @@ const Moviesinfo = () => {
   });
 
   // const isMovieFavorited = true;
-  // const isMovieListed = true;
 
   const { data, isFetching, error } = useGetMovieQuery(id);
   const { data: recommendations, isFetching: isRecommendationsFetching } =
