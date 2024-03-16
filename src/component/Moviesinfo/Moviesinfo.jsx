@@ -55,8 +55,6 @@ const Moviesinfo = () => {
     page: 1,
   });
 
-  // const isMovieFavorited = true;
-
   const { data, isFetching, error } = useGetMovieQuery(id);
   const { data: recommendations, isFetching: isRecommendationsFetching } =
     useGetRecommendationsQuery({ list: "/recommendations", movie_id: id });
