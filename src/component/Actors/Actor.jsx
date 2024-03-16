@@ -1,12 +1,3 @@
-
-//   if (isFetching) {
-//     return (
-//       <Box display="flex" justifyContent="center">
-//         <CircularProgress size="8rem" />
-//       </Box>
-//     );
-//   }
-
 //   if (error) {
 //     return (
 //       <Box display="flex" justifyContent="center" alignItems="center">
