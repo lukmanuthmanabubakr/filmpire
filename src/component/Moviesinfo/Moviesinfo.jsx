@@ -116,7 +116,6 @@ const Moviesinfo = () => {
     );
   }
   // const  {id} = useParams()
-  // const classes = useStyles()
   return (
     <Grid container className={classes.containerSpaceAround}>
       <Grid item sm={12} lg={4}>
