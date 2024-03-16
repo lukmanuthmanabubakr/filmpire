@@ -1,6 +1,4 @@
 
-//   const { data, isFetching, error } = useGetActorsDetailsQuery(id);
-
 //   if (isFetching) {
 //     return (
 //       <Box display="flex" justifyContent="center">
