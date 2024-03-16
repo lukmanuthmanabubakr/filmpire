@@ -2,9 +2,6 @@
 // import { ClassNames } from "@emotion/react";
 // import useStyles from '../Actors/Stlye'
 
-// const Actor = () => {
-//   const { id } = useParams();
-//   const navigate = useNavigate();
 
 //   const { data, isFetching, error } = useGetActorsDetailsQuery(id);
 
