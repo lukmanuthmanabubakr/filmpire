@@ -1,13 +1,4 @@
-//   if (error) {
-//     return (
-//       <Box display="flex" justifyContent="center" alignItems="center">
-//         <Button
-//           startIcon={<ArrowBack />}
-//           onClick={() => navigate.goBack()}
-//         ></Button>
-//       </Box>
-//     );
-//   }
+
 //   return (
 //     <>
 //       <Grid container spacing={3}>
