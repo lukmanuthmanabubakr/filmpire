@@ -1,6 +1,4 @@
 
-// import { ArrowBack } from "@mui/icons-material";
-// import { useGetActorsDetailsQuery } from "../Services/TMDB";
 // import { ClassNames } from "@emotion/react";
 // import useStyles from '../Actors/Stlye'
 
