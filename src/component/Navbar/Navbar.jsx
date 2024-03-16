@@ -193,28 +193,7 @@ export default NavBar;
 //        }
 //     }
 //   })
-//   return (
-//     <>
-//       <AppBar position='fixed'>
-//           <Toolbar className={classes.toolBar}> 
-//           {isMobile && (
-//               <IconButton color='inherit'
-//               edge='start' style={{outline: 'none'}}
-//               onClick={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
-//               className={classes.menuBtn}>
-//             <Menu/>
-//             </IconButton>
-//             )
-//           }
-
-//            <IconButton color='inherit' sx={{ml:1}} onClick={() => {}}> 
-//             {theme.palatte === 'dark' ? <Brightness7/> : <Brightness4/>}
-//             </IconButton>
-
-//           {!isMobile && <Search/>}
-
-//           <div>
-
+//
 //             {!isAuthenticated ? (
 //               <Button color='inherit' onClick={fetchToken}>
 //             Login &nbsp; <AccountCircle/>
