@@ -51,13 +51,6 @@ linkButton: {
 //     toolBar: {
 //         display: 'flex',
 //         justifyContent: 'center',
-//         [theme.breakpoints.down('sm')] : {
-//             marginLeft:' 0',
-//             flexWrap: 'wrap',
-//         }
-
-//     },
-
 //     menuBtn: {
 //         marginRight: theme.spacing(2),
 //         [theme.breakpoints.up('sm')] : {
