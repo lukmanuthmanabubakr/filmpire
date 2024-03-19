@@ -143,8 +143,6 @@ export default Sidebar;
 // import { useDispatch, useSelector } from 'react-redux';
 // import { selectGenreOrCategory } from '../../Features/CurrentGenresOrCategory'
 // import { useGetGenresQuery } from '../Services/TMDB';
-// import genresIcon from '../../assets/genres'
-
 
 
 // const categories = [
