@@ -223,8 +223,6 @@ export default Sidebar;
 //       </List>
 //       <Divider/>
 //       <List>
-//         <ListSubheader>
-//           Genres
 
 
 
