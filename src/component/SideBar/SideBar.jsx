@@ -235,4 +235,3 @@ export default Sidebar;
 //           <Link key={name} className={classes.links} to='/'>
 //               <ListItem onClick={() => {}} button>
 //                   <ListItemIcon>
-//                   <img src={genresIcon[name.toLowerCase()]} className={classes.genreImages} height={30}/>
