@@ -230,6 +230,5 @@ export default Sidebar;
 //         {isFetching ? (
 //               <Box display='flex' justifyContent='center'>
 //                 <CircularProgress/>
-//               </Box> 
-//         ) : data.genres.map(({name, id}) => (
+
 
