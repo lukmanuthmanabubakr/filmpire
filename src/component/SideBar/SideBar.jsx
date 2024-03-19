@@ -238,9 +238,7 @@ export default Sidebar;
 //                   <img src={genresIcon[name.toLowerCase()]} className={classes.genreImages} height={30}/>
 //                   </ListItemIcon>
 //                   <ListItemText primary={name}/>
-//               </ListItem>
-//             </Link>
-//         ))}
+
 //       </List>
       
 //     </>
