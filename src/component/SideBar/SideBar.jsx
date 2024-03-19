@@ -225,9 +225,6 @@ export default Sidebar;
 //       <List>
 //         <ListSubheader>
 //           Genres
-//         </ListSubheader>
-
-//         {isFetching ? (
 
 
 
