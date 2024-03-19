@@ -26,7 +26,7 @@ export const tmdbApi = createApi({
         ) {
           return `movie/${genreIdOrCategoryName}?page=${page}&api_key=${tmdbApiKey}`;
         }
-        // Get movies by Genre
+        
         if (
           genreIdOrCategoryName &&
           typeof genreIdOrCategoryName === "number"
