@@ -232,4 +232,4 @@ export default Sidebar;
 //                 <CircularProgress/>
 //               </Box> 
 //         ) : data.genres.map(({name, id}) => (
-//           <Link key={name} className={classes.links} to=
+
